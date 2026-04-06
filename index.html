@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Alejandro Guardado — Desarrollador Web Junior y Técnico Informático">
+  <title>Alejandro Guardado · Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:       '#08080f',
+            surface:  '#0f0f1a',
+            surface2: '#16162a',
+            accent:   '#7c6fee',
+            accent2:  '#4ecba5',
+            muted:    '#6b6b8a',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            mono:    ['Space Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-bg text-white font-mono">
+
+  <!-- ═══════════════════════════════════════ NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="#hero" class="font-display font-bold text-accent text-lg tracking-widest">AG_</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#sobre-mi"    class="nav-link text-sm text-muted hover:text-white transition-colors">sobre mí</a>
+        <a href="#habilidades" class="nav-link text-sm text-muted hover:text-white transition-colors">habilidades</a>
+        <a href="#experiencia" class="nav-link text-sm text-muted hover:text-white transition-colors">experiencia</a>
+        <a href="#proyectos"   class="nav-link text-sm text-muted hover:text-white transition-colors">proyectos</a>
+        <a href="#contacto"    class="nav-link text-sm text-muted hover:text-white transition-colors">contacto</a>
+      </div>
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden text-muted hover:text-white transition-colors">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <rect y="3"  width="20" height="1.5" rx="1"/>
+          <rect y="9"  width="20" height="1.5" rx="1"/>
+          <rect y="15" width="20" height="1.5" rx="1"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-surface border-t border-white/5 px-6 py-4">
+      <div class="flex flex-col gap-4">
+        <a href="#sobre-mi"    class="text-sm text-muted hover:text-white transition-colors">sobre mí</a>
+        <a href="#habilidades" class="text-sm text-muted hover:text-white transition-colors">habilidades</a>
+        <a href="#experiencia" class="text-sm text-muted hover:text-white transition-colors">experiencia</a>
+        <a href="#proyectos"   class="text-sm text-muted hover:text-white transition-colors">proyectos</a>
+        <a href="#contacto"    class="text-sm text-muted hover:text-white transition-colors">contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ HERO -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center px-6 pt-20 max-w-5xl mx-auto">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 bg-surface2 border border-accent/20 rounded-full px-4 py-1.5 mb-8">
+        <span class="w-2 h-2 rounded-full bg-accent2 pulse-dot"></span>
+        <span class="text-xs text-accent2 font-mono">disponible para trabajar</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-none tracking-tight mb-4">
+        Alejandro<br>
+        <span class="text-accent">Guardado</span><span class="text-muted">.</span>
+      </h1>
+    </div>
+
+    <div class="reveal delay-2">
+      <p class="text-muted text-base md:text-lg max-w-xl leading-relaxed mb-3">
+        Desarrollador Web Junior &amp; Técnico Informático.
+      </p>
+      <p class="text-muted/60 text-sm max-w-xl leading-relaxed mb-10">
+        Del servidor al navegador — construyo soluciones reales con PHP, Linux y JavaScript. Apasionado por la ciberseguridad y la administración de sistemas.
+      </p>
+    </div>
+
+    <div class="reveal delay-3 flex flex-wrap gap-4 mb-16">
+      <a href="#proyectos" class="btn-primary">ver proyectos</a>
+      <a href="#contacto"  class="btn-outline">contacto</a>
+    </div>
+
+    <div class="reveal delay-4 flex items-center gap-6 text-xs text-muted">
+      <span class="flex items-center gap-2"><span class="text-accent font-bold">03</span> títulos FP</span>
+      <span class="w-px h-4 bg-white/10"></span>
+      <span class="flex items-center gap-2"><span class="text-accent2 font-bold">+2</span> proyectos</span>
+      <span class="w-px h-4 bg-white/10"></span>
+      <span class="flex items-center gap-2"><span class="text-accent font-bold">∞</span> ganas de aprender</span>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2">
+      <span class="text-xs text-muted tracking-widest">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ SOBRE MÍ -->
+  <section id="sobre-mi" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="reveal">
+      <p class="text-xs text-accent tracking-widest mb-2 font-mono">// 01 — sobre mí</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-12">Quién soy</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal delay-1">
+      <div class="card group">
+        <div class="card-line"></div>
+        <h3 class="text-accent2 text-xs tracking-widest mb-3 font-mono">FORMACIÓN</h3>
+        <p class="text-muted text-sm leading-relaxed">Tres títulos de FP que me dan una visión completa: desde montar una red hasta desplegar una aplicación web o administrar un servidor Linux.</p>
+      </div>
+      <div class="card group">
+        <div class="card-line"></div>
+        <h3 class="text-accent2 text-xs tracking-widest mb-3 font-mono">ENFOQUE</h3>
+        <p class="text-muted text-sm leading-relaxed">Aprendo construyendo. Cada proyecto es un reto real donde pongo a prueba mis conocimientos y descubro algo nuevo. La teoría sin práctica no sirve de nada.</p>
+      </div>
+      <div class="card group">
+        <div class="card-line"></div>
+        <h3 class="text-accent2 text-xs tracking-widest mb-3 font-mono">INTERESES</h3>
+        <p class="text-muted text-sm leading-relaxed">Ciberseguridad ofensiva y defensiva, administración de sistemas Linux, desarrollo web full-stack y virtualización de infraestructura.</p>
+      </div>
+      <div class="card group">
+        <div class="card-line"></div>
+        <h3 class="text-accent2 text-xs tracking-widest mb-3 font-mono">OBJETIVO</h3>
+        <p class="text-muted text-sm leading-relaxed">Incorporarme a un equipo donde pueda crecer, aportar desde el primer día y seguir aprendiendo. Busco un entorno donde la curiosidad sea un valor, no un estorbo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ HABILIDADES -->
+  <section id="habilidades" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="reveal">
+      <p class="text-xs text-accent tracking-widest mb-2 font-mono">// 02 — habilidades</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-12">Stack tecnológico</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal delay-1">
+
+      <!-- Backend -->
+      <div>
+        <p class="text-xs text-accent tracking-widest mb-4 font-mono">BACKEND</p>
+        <div class="flex flex-col gap-3">
+          <div class="skill-row"><span class="skill-bar" style="--w:85%"></span><span>PHP 8</span></div>
+          <div class="skill-row"><span class="skill-bar" style="--w:80%"></span><span>MySQL</span></div>
+          <div class="skill-row"><span class="skill-bar" style="--w:70%"></span><span>PDO / SQL</span></div>
+          <div class="skill-row"><span class="skill-bar green" style="--w:65%"></span><span>Apache</span></div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div>
+        <p class="text-xs text-accent tracking-widest mb-4 font-mono">FRONTEND</p>
+        <div class="flex flex-col gap-3">
+          <div class="skill-row"><span class="skill-bar" style="--w:88%"></span><span>HTML / CSS</span></div>
+          <div class="skill-row"><span class="skill-bar" style="--w:75%"></span><span>JavaScript</span></div>
+          <div class="skill-row"><span class="skill-bar green" style="--w:60%"></span><span>Tailwind CSS</span></div>
+          <div class="skill-row"><span class="skill-bar" style="--w:40%"></span><span>Angular (aprendiendo)</span></div>
+        </div>
+      </div>
+
+      <!-- Sistemas -->
+      <div>
+        <p class="text-xs text-accent tracking-widest mb-4 font-mono">SISTEMAS</p>
+        <div class="flex flex-col gap-3">
+          <div class="skill-row"><span class="skill-bar green" style="--w:85%"></span><span>Linux / Ubuntu</span></div>
+          <div class="skill-row"><span class="skill-bar" style="--w:80%"></span><span>Redes TCP/IP</span></div>
+          <div class="skill-row"><span class="skill-bar green" style="--w:75%"></span><span>VMware</span></div>
+          <div class="skill-row"><span class="skill-bar" style="--w:70%"></span><span>Kali / Wireshark</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ EXPERIENCIA -->
+  <section id="experiencia" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="reveal">
+      <p class="text-xs text-accent tracking-widest mb-2 font-mono">// 03 — experiencia</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-12">Trayectoria</h2>
+    </div>
+
+    <div class="relative reveal delay-1">
+      <!-- Línea vertical -->
+      <div class="absolute left-3 top-2 bottom-0 w-px bg-white/5"></div>
+
+      <div class="flex flex-col gap-10">
+
+        <div class="tl-item pl-10 relative">
+          <div class="tl-dot"></div>
+          <p class="text-xs text-accent font-mono mb-1">2024 — actualidad</p>
+          <h3 class="font-display font-bold text-lg mb-1">Proyectos personales</h3>
+          <p class="text-accent2 text-xs font-mono mb-3">Desarrollo propio · Autoaprendizaje</p>
+          <p class="text-muted text-sm leading-relaxed">Desarrollo de un Drive personal con PHP, MySQL y Apache. Laboratorio de ciberseguridad con Kali Linux, Bettercap y Wireshark. Administración de servidores Ubuntu en entornos virtualizados con VMware.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Linux</span><span class="tag">Kali</span>
+          </div>
+        </div>
+
+        <div class="tl-item pl-10 relative">
+          <div class="tl-dot"></div>
+          <p class="text-xs text-accent font-mono mb-1">2023 — 2025</p>
+          <h3 class="font-display font-bold text-lg mb-1">DAW — Desarrollo de Aplicaciones Web</h3>
+          <p class="text-accent2 text-xs font-mono mb-3">FP Superior · Grado Superior</p>
+          <p class="text-muted text-sm leading-relaxed">Desarrollo frontend y backend, bases de datos relacionales, programación orientada a objetos, despliegue y mantenimiento de aplicaciones web.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="tl-item pl-10 relative">
+          <div class="tl-dot"></div>
+          <p class="text-xs text-accent font-mono mb-1">Completado</p>
+          <h3 class="font-display font-bold text-lg mb-1">ASIR — Administración de Sistemas Informáticos en Red</h3>
+          <p class="text-accent2 text-xs font-mono mb-3">FP Superior · Grado Superior</p>
+          <p class="text-muted text-sm leading-relaxed">Administración de servidores Windows y Linux, configuración de redes, servicios en red, seguridad informática y virtualización.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Linux</span><span class="tag">Redes</span><span class="tag">Seguridad</span><span class="tag">VMware</span>
+          </div>
+        </div>
+
+        <div class="tl-item pl-10 relative">
+          <div class="tl-dot accent2"></div>
+          <p class="text-xs text-accent font-mono mb-1">Completado</p>
+          <h3 class="font-display font-bold text-lg mb-1">SMR — Sistemas Microinformáticos y Redes</h3>
+          <p class="text-accent2 text-xs font-mono mb-3">FP Medio · Grado Medio</p>
+          <p class="text-muted text-sm leading-relaxed">Montaje y mantenimiento de equipos, instalación de sistemas operativos, configuración de redes locales y soporte técnico a usuarios.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Hardware</span><span class="tag">Redes LAN</span><span class="tag">Windows</span><span class="tag">Soporte</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CERTIFICADOS -->
+  <section id="certificados" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="reveal">
+      <p class="text-xs text-accent tracking-widest mb-2 font-mono">// 04 — certificados</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-12">Títulos oficiales</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal delay-1">
+
+      <div class="cert-card">
+        <div class="cert-number">01</div>
+        <h3 class="font-display font-bold text-xl mb-1">SMR</h3>
+        <p class="text-accent text-xs font-mono mb-3">Grado Medio</p>
+        <p class="text-muted text-sm">Sistemas Microinformáticos y Redes</p>
+        <div class="cert-glow"></div>
+      </div>
+
+      <div class="cert-card featured">
+        <div class="cert-number accent">02</div>
+        <h3 class="font-display font-bold text-xl mb-1">ASIR</h3>
+        <p class="text-accent text-xs font-mono mb-3">Grado Superior</p>
+        <p class="text-muted text-sm">Administración de Sistemas Informáticos en Red</p>
+        <div class="cert-glow"></div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-number">03</div>
+        <h3 class="font-display font-bold text-xl mb-1">DAW</h3>
+        <p class="text-accent text-xs font-mono mb-3">Grado Superior</p>
+        <p class="text-muted text-sm">Desarrollo de Aplicaciones Web</p>
+        <div class="cert-glow"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PROYECTOS -->
+  <section id="proyectos" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="reveal">
+      <p class="text-xs text-accent tracking-widest mb-2 font-mono">// 05 — proyectos</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-12">Lo que he construido</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal delay-1">
+
+      <!-- Proyecto 1 -->
+      <div class="project-card featured-project">
+        <div class="flex items-start justify-between mb-4">
+          <span class="tag accent-tag">Proyecto destacado</span>
+          <span class="text-muted text-xs font-mono">2025</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2">Drive Local</h3>
+        <p class="text-muted text-sm leading-relaxed mb-6">Sistema de almacenamiento en la nube privado similar a Google Drive. Incluye registro de usuarios, gestión de archivos y carpetas, panel de administración, buscador en tiempo real y control de cuotas. Desplegado en Ubuntu Server con Apache y PHP.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag">PHP 8.3</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Apache</span>
+          <span class="tag">Ubuntu Server</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">PDO</span>
+        </div>
+        <a href="#" class="project-link">ver proyecto →</a>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="project-card">
+        <div class="flex items-start justify-between mb-4">
+          <span class="tag">Ciberseguridad</span>
+          <span class="text-muted text-xs font-mono">2025</span>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2">Laboratorio MITM</h3>
+        <p class="text-muted text-sm leading-relaxed mb-6">Demostración práctica de ataque Man in the Middle en entorno controlado con VMware. Captura de credenciales en texto plano con Bettercap y Wireshark, y solución mediante HTTPS con certificado SSL.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag">Kali Linux</span>
+          <span class="tag">Bettercap</span>
+          <span class="tag">Wireshark</span>
+          <span class="tag">VMware</span>
+          <span class="tag">HTTPS/SSL</span>
+        </div>
+        <a href="#" class="project-link">ver detalles →</a>
+      </div>
+
+      <!-- Proyecto 3 — placeholder -->
+      <div class="project-card placeholder-card md:col-span-2">
+        <p class="text-muted text-sm font-mono text-center">// más proyectos próximamente</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CONTACTO -->
+  <section id="contacto" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="reveal">
+      <p class="text-xs text-accent tracking-widest mb-2 font-mono">// 06 — contacto</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Hablemos</h2>
+      <p class="text-muted text-sm max-w-lg leading-relaxed mb-12">Estoy buscando nuevas oportunidades y siempre abierto a colaborar en proyectos interesantes. Si tienes una propuesta o simplemente quieres conectar, escríbeme.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 reveal delay-1">
+      <a href="mailto:alejandro50386@gmail.com" class="contact-card">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m2 7 10 7 10-7"/>
+        </svg>
+        <span class="text-xs text-muted font-mono mb-1">email</span>
+        <span class="text-sm text-white">alejandro50386@gmail.com</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/alejandro-guardado-b504081b0/" target="_blank" class="contact-card">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        <span class="text-xs text-muted font-mono mb-1">linkedin</span>
+        <span class="text-sm text-white">Alejandro Guardado</span>
+      </a>
+      
+      <!--
+      <a href="https://github.com/tu-usuario" target="_blank" class="contact-card">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        <span class="text-xs text-muted font-mono mb-1">github</span>
+        <span class="text-sm text-white">github.com/tu-usuario</span>
+      </a>
+      -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER -->
+  <footer class="border-t border-white/5 py-8 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-display font-bold text-accent tracking-widest">AG_</span>
+      <p class="text-muted text-xs font-mono">Diseñado y desarrollado por Alejandro Guardado · 2025</p>
+      <p class="text-muted text-xs font-mono">HTML · CSS · JavaScript · Tailwind</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
